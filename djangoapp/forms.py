@@ -8,7 +8,7 @@ class PostForm(forms.ModelForm):
         model=Post
         fields=['title','content']
 
-    def clean_email(self):
+    def clean_content(self):
         content= self.cleaned_data.get('content')
         return content
 
