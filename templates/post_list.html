@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+
+ <div class="col-sm-6 col-sm-offset-3">
+
+
+  {% for obj in list %}
+
+
+                <div class="jumbotron">
+                  <h3> <a href="/display/{{ obj.id }}">{{obj.title}}</a></h3>
+                  <p>{{obj.content | safe  | linebreaks | truncatechars:50}}</p>
+                    <p>{{obj.timestamp}}</p>
+                    <p>{{obj.updated}}</p>
+                </div>
+
+
+
+ {% endfor %}
+ </div>
+
+{% endblock  %}
